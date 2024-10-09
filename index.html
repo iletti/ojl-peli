@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>OJL Korulaatikko Peli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEFA, #FFFFFF);
+            position: relative;
+        }
+
+        #gameCanvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #startScreen, #gameOverScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #87CEFA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #gameOverScreen {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="startScreen">
+        <h1>OJL Korulaatikko Peli</h1>
+        <button onclick="startGame()">Aloita peli</button>
+    </div>
+
+    <div id="gameOverScreen">
+        <h1>Peli päättyi!</h1>
+        <p id="finalScore"></p>
+        <button onclick="restartGame()">Aloita alusta</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
